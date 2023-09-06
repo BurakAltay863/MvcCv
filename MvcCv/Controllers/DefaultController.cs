@@ -37,5 +37,18 @@ namespace MvcCv.Controllers
             var certificate = db.TblCertificate.ToList();
             return PartialView(certificate);
         }
+        [HttpGet]
+        public PartialViewResult Communication()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Communication(TblCommunication t)
+        {
+            t.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            db.TblCommunication.Add(t);
+            db.SaveChanges();
+            return PartialView();
+        }
     }
 }
