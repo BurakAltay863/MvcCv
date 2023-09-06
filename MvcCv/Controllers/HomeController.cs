@@ -26,5 +26,16 @@ namespace MvcCv.Controllers
 
             return View();
         }
+        
+        public ActionResult Test()
+        {
+            return View();
+        }
+
+        public ActionResult Test2()
+        {
+            return View();
+        }
+
     }
 }
