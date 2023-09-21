@@ -10,7 +10,7 @@
 <br />
 <form method="post">
     @Html.Label("Deneyim Id")
-    @Html.TextBoxFor(x => x.ID,new  {@class ="form-control" })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
     <br />
     @Html.Label("Başlık")
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
@@ -22,7 +22,9 @@
     @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
     <br />
     @Html.Label("Açıklama")
-    @Html.TextAreaFor(x => x.Descreption, new { @class = "form-control"})
+    @Html.TextAreaFor(x => x.Descreption, new { @class = "form-control" })
     <br />
     <button class="btn btn-info">Guncelle</button>
 </form>
+<br />
+<a class="btn btn-info" href="/Experience/Index">İptal et</a>
