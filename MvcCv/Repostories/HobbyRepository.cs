@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MvcCv.Repostories
 {
-    public class HobbyRepository: GenericRepository<TblExperience>
+    public class HobbyRepository: GenericRepository<TblHobby>
     {
     }
 }

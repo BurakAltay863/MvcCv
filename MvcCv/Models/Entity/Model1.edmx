@@ -32,6 +32,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Descreption" Type="varchar" MaxLength="500" />
+          <Property Name="Date" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TblCommunication">
           <Key>
@@ -44,6 +45,7 @@
           <Property Name="Subject" Type="varchar" MaxLength="50" />
           <Property Name="Message" Type="varchar(max)" />
           <Property Name="Date" Type="date" />
+          <Property Name="Response" Type="tinyint" />
         </EntityType>
         <EntityType Name="TblEducation">
           <Key>
@@ -124,6 +126,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descreption" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TblCommunication">
           <Key>
@@ -136,6 +139,7 @@
           <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Response" Type="Byte" />
         </EntityType>
         <EntityType Name="TblEducation">
           <Key>
@@ -217,6 +221,7 @@
           <EntitySetMapping Name="TblCertificate">
             <EntityTypeMapping TypeName="DbCvModel.TblCertificate">
               <MappingFragment StoreEntitySet="TblCertificate">
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Descreption" ColumnName="Descreption" />
               </MappingFragment>
@@ -225,6 +230,7 @@
           <EntitySetMapping Name="TblCommunication">
             <EntityTypeMapping TypeName="DbCvModel.TblCommunication">
               <MappingFragment StoreEntitySet="TblCommunication">
+                <ScalarProperty Name="Response" ColumnName="Response" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />

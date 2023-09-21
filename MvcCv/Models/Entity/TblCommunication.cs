@@ -21,5 +21,6 @@ namespace MvcCv.Models.Entity
         public string Subject { get; set; }
         public string Message { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<byte> Response { get; set; }
     }
 }

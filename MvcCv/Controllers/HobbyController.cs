@@ -8,10 +8,10 @@ using System.Web.Mvc;
 
 namespace MvcCv.Controllers
 {
-    public class AboutController : Controller
+    public class HobbyController : Controller
     {
-        // GET: About
-        AboutRpository repo = new AboutRpository();
+        // GET: Hobby
+        HobbyRepository repo = new HobbyRepository();
         [HttpGet]
         public ActionResult Index()
         {
@@ -19,17 +19,12 @@ namespace MvcCv.Controllers
             return View(values);
         }
         [HttpPost]
-        public ActionResult Index(TblAbout p)
+        public ActionResult Index(TblHobby p)
         {
             //TblHobby t = new TblHobby();
-            var t = repo.Find(x => x.ID == 1);
-            t.Name = p.Name;
-            t.Surname = p.Surname;
-            t.Address = p.Address;
-            t.Mail = p.Mail;
-            t.Descreption = p.Descreption;
-            t.Telephone = p.Telephone;
-            t.Image = p.Image;
+            var t = repo.Find(x => x.ID == 3);
+            t.Descreption1 = p.Descreption1;
+            t.Descreption2 = p.Descreption2;
             repo.TUpdate(t);
             return RedirectToAction("Index");
         }

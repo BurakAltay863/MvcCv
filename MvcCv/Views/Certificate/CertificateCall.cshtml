@@ -1,0 +1,21 @@
+﻿@model MvcCv.Models.Entity.TblCertificate
+@{
+    ViewBag.Title = "CertificateCall";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sertifika bilgisi düzenle</h2>
+<br />
+<form method="post">
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+   
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Descreption, new { @class = "form-control" })
+   
+   
+    <button class="btn btn-info">Güncelle</button>
+</form>
+<br />
+<a class="btn btn-info" href="/Certificate/Index">İptal et</a>
