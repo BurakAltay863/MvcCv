@@ -139,6 +139,7 @@
     <Compile Include="Controllers\HobbyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,6 +182,9 @@
     <Compile Include="Models\Entity\TblSkills.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TblSocialMedia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repostories\AboutRpository.cs" />
     <Compile Include="Repostories\CertificateRepository.cs" />
@@ -190,6 +194,7 @@
     <Compile Include="Repostories\GenericRepository.cs" />
     <Compile Include="Repostories\HobbyRepository.cs" />
     <Compile Include="Repostories\SkilssRepository.cs" />
+    <Compile Include="Repostories\SocialMediaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE-3.0.4\.gitignore" />
@@ -2364,6 +2369,9 @@
     <Content Include="Views\Certificate\CertificateAdd.cshtml" />
     <Content Include="Views\Communication\Index.cshtml" />
     <Content Include="Views\Hobby\Index.cshtml" />
+    <Content Include="Views\Default\SocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\Index.cshtml" />
+    <Content Include="Views\SocialMedia\SocialMediaCall.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

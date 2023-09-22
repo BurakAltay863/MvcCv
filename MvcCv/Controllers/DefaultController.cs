@@ -16,6 +16,11 @@ namespace MvcCv.Controllers
             var values = db.TblAbout.ToList();
             return View(values);
         }
+        public PartialViewResult SocialMedia()
+        {
+            var socialmedia = db.TblSocialMedia.Where(x=>x.Durum==true).ToList();
+            return PartialView(socialmedia);
+        }
 
         public PartialViewResult Experience()
         {

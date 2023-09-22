@@ -35,7 +35,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Deneyimler</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Eğitim</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Beceriler</a></li>
-                @* <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Hobby</a></li>*@
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hobby">Hobby</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Katılımlar</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">İletişim</a></li>
             </ul>
@@ -57,12 +57,7 @@
                         <a href="@x.Mail">@x.Mail</a>
                     </div>
                     <p class="lead mb-5">@x.Descreption</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/burak-altay-991bb620a/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/BurakAltay863"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="https://medium.com/me/stories/public"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
+                   @Html.Action("SocialMedia")
                 </div>
             </section>
         }
