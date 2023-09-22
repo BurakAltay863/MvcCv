@@ -4,6 +4,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@{ string durum = "";}
+
+@{ string buttonRenk = "";}
+
+@{ string buttonYazi = "";}
+
+@{ string buttonIkon = "";}
+
 
 <html>
 <body class="hold-transition sidebar-mini">
@@ -35,31 +43,71 @@
                                     </thead>
                                     <tbody>
                                         @foreach (var item in Model)
-                                       
+
                                         {
-                                        <tr>
-                                            <td>@item.ID</td>
-                                            <td>@item.Name</td>
-                                            @if (item.Durum == true)
+
+                                            if (item.Durum == true)
+
                                             {
-                                                <td>Aktif</td>
+
+                                                durum = "Aktif";
+
+                                                buttonRenk = "btn btn-danger btn-sm";
+
+                                                buttonYazi = "Pasif Yap";
+
+                                                buttonIkon = "fas fa-trash";
+
                                             }
-                                            else {
-                                            <td>Pasif</td>
+
+                                            else
+
+                                            {
+
+                                                durum = "Pasif";
+
+                                                buttonRenk = "btn btn-success btn-sm";
+
+                                                buttonYazi = "Aktif Yap";
+
+                                                buttonIkon = "fas fa-upload";
+
                                             }
-                                            <td>
-                                                <a class="btn btn-info btn-sm" href="/SocialMedia/SocialMediaCall/@item.ID/">
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    Düzenle
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-danger btn-sm" href="/SocialMedia/SocialMediaDelete/@item.ID/">
-                                                    <i class="fas fa-trash"></i>
-                                                    Sil
-                                                </a>
-                                            </td>
-                                        </tr>
+
+                                            <tr>
+
+                                                <td>@item.ID</td>
+
+                                                <td>@item.Name</td>
+
+                                                <td>@durum</td>
+
+                                                <td>
+
+                                                    <a class="btn btn-info btn-sm" href="/SocialMedia/SocialMediaCall/@item.ID">
+
+                                                        <i class="fas fa-pencil-alt"></i>
+
+                                                        Düzenle
+
+                                                    </a>
+
+                                                </td>
+
+                                                <td>
+
+                                                    <a class="@buttonRenk" href="/SocialMedia/SocialMediaDelete/@item.ID">
+
+                                                        <i class="@buttonIkon"></i>
+
+                                                        @buttonYazi
+
+                                                    </a>
+
+                                                </td>
+
+                                            </tr>
+
                                         }
                                     </tbody>
                                 </table>

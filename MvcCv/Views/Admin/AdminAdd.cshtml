@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "AdminAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h4>Yeni Kullanıcı Ekleme Sayfası</h4>
+<br />
+<form method="post">
+    <br />
+    <input type="text" class="form-control" name="UserName" placeholder="Kullanıcı adı yazınız" />
+    <br />
+    <input type="text" class="form-control" name="Password" placeholder="Şifre yazınız" />
+    <br />
+   
+    <button class="btn btn-info">Ekle</button>
+</form>
+<br />
+<a class="btn btn-info" href="/Admin/Index">İptal et</a>

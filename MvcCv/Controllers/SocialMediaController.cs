@@ -39,7 +39,6 @@ namespace MvcCv.Controllers
         {
             TblSocialMedia t = repo.Find(x => x.ID == p.ID);
             t.Name = p.Name;
-            t.Durum = true;
             t.Link = p.Link;
             t.Ikon = p.Ikon;
             repo.TUpdate(t);
@@ -49,7 +48,21 @@ namespace MvcCv.Controllers
         public ActionResult SocialMediaDelete(int id)
         {
             var result = repo.Find(x => x.ID == id);
-            result.Durum = false;
+            if (result.Durum == true)
+
+            {
+
+                result.Durum = false;
+
+            }
+
+            else
+
+            {
+
+                result.Durum = true;
+
+            }
             repo.TUpdate(result);
             return RedirectToAction("Index");
         }
