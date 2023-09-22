@@ -32,6 +32,11 @@ namespace MvcCv.Controllers
             var education = db.TblEducation.ToList();
             return PartialView(education);
         }
+        public PartialViewResult Hobby()
+        {
+            var hobby = db.TblHobby.ToList();
+            return PartialView(hobby);
+        }
         public PartialViewResult Skills()
         {
             var skilss = db.TblSkills.ToList();

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using MvcCv.Models.Entity;
 using MvcCv.Repostories;
 namespace MvcCv.Controllers
-{   [AllowAnonymous]
+{   
     public class AdminController : Controller
     {
         // GET: Admin
